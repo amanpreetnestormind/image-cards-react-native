@@ -224,6 +224,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('keystore_file.keystore')
+            storePassword ("123456")
+            keyAlias("NM")
+            keyPassword("123456")
+        }
     }
     buildTypes {
         debug {
@@ -252,7 +258,7 @@ android {
 
         }
     }
-}
+  }
 
 // Apply static values from `gradle.properties` to the `android.packagingOptions`
 // Accepts values in comma delimited lists, example:
